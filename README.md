@@ -1,4 +1,4 @@
-# FD Learn
+# FD Learn - [try the tool!](https://fd-learn.vercel.app)
 
 An interactive Next.js app for learning and practicing functional dependencies.
 
