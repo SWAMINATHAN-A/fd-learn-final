@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Moon, Sun, ArrowUpRight, Download } from "lucide-react";
+import { Moon, Sun, ArrowUpRight, Download, ExternalLink } from "lucide-react";
 import { downloadPdf, downloadText } from "@/lib/reports/report-generator";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -48,6 +48,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link href="/exam-practice" className="hover:text-[var(--ink)]">
               Exam mode
             </Link>
+            <a
+              href="https://suryaa-33.github.io/lsm-tree-visualizer/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-black text-[var(--accent)] hover:text-[var(--ink)]"
+            >
+              LSM Visualizer
+            </a>
             <Link href="/help" className="hover:text-[var(--ink)]">
               Help
             </Link>
@@ -56,6 +64,17 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
+            <a
+              href="https://suryaa-33.github.io/lsm-tree-visualizer/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-2 text-xs font-black text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-[var(--ink)]"
+              aria-label="Open LSM Tree Visualizer in a new tab"
+            >
+              <ExternalLink size={14} />
+              <span className="hidden sm:inline">Explore LSM Lab</span>
+              <span className="sm:hidden">LSM Lab</span>
+            </a>
             <button
               onClick={toggleTheme}
               className="grid h-9 w-9 place-items-center rounded-full border hover:bg-[var(--panel)]"
